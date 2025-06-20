@@ -1,7 +1,7 @@
 import toast from "react-hot-toast";
 import { create } from "zustand";
 
-const BaseURL = "http://localhost:3000/api/v1";
+//const BaseURL = "http://localhost:3000/api/v1";
 export const useProductStore = create((set) => ({
   products: [],
   setProducts: (newProducts) => set({ products: newProducts }),
@@ -11,7 +11,7 @@ export const useProductStore = create((set) => ({
       return { status: false, message: "Please fill all the fields" };
     }
     try {
-      const res = await fetch(`${BaseURL}/product`, {
+      const res = await fetch(`/api/v1/product`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -37,7 +37,7 @@ export const useProductStore = create((set) => ({
   },
   getAllProuducts: async () => {
     try {
-      const res = await fetch(`${BaseURL}/products`);
+      const res = await fetch(`/api/v1/products`);
       const data = await res.json();
       set({ products: data.data });
     } catch (error) {
@@ -51,7 +51,7 @@ export const useProductStore = create((set) => ({
   deleteProduct: async (id) => {
     if (id) {
       try {
-        const res = await fetch(`${BaseURL}/product/${id}`, {
+        const res = await fetch(`/api/v1/product/${id}`, {
           method: "DELETE",
         });
         const data = await res.json();
@@ -78,7 +78,7 @@ export const useProductStore = create((set) => ({
     }
 
     try {
-        const res = await fetch(`${BaseURL}/product/${id}`,{
+        const res = await fetch(`/api/v1/product/${id}`,{
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
