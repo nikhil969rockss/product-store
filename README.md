@@ -16,6 +16,24 @@ A simple full-stack CRUD web application for managing product listings. Users ca
 - 📱 Fully responsive layout across devices
 - 🚫 No authentication — anyone can interact with the product list
 
+
+## 📸 Screenshots
+
+### Desktop preview 
+
+<img width="500" alt="Desktop-preview" src="https://github.com/user-attachments/assets/b67a2c29-47ae-4e30-8484-772f4a8ee33d" />
+
+
+### Mobile preview
+
+<img height="300" alt="mobile-preview" src="https://github.com/user-attachments/assets/1b9b2078-c2fc-4fed-af1d-4d7ca2291b55" />
+
+
+### [view full preview](https://product-store-q5bq.onrender.com/)
+
+
+
+
 ## 🛠 Tech Stack
 
 ### Backend:
@@ -37,7 +55,7 @@ A simple full-stack CRUD web application for managing product listings. Users ca
 
 ```bash
 # Clone the repo and install root dependencies
-git clone <your-repo-url>
+git clone git@github.com:nikhil969rockss/product-store.git
 cd product-store
 npm install
 
